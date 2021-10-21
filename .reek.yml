@@ -32,11 +32,9 @@ detectors:
     enabled: true
     exclude:
       - ApplicationCable
-      - ApplicationController
       - ApplicationHelper
       - ApplicationJob
       - ApplicationMailer
-      - ApplicationRecord
       - ApplicationSystemTestCase
       - ActiveSupport::TestCase
       - ServerMonitoring::Application
@@ -136,3 +134,14 @@ detectors:
     enabled: true
     exclude: []
     public_methods_only: false
+exclude_paths:
+  - db/migrate
+  - test
+  - app/models/ability.rb
+directories:
+  "app/models/**":
+    IrresponsibleModule:
+      enabled: false
+  "app/controllers/**":
+    IrresponsibleModule:
+      enabled: false
