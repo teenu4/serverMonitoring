@@ -55,6 +55,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
   gem 'debug', '>= 1.0.0', platforms: %i[mri mingw x64_mingw]
+  # Testing
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 5.0.0'
 end
 
 group :development do
