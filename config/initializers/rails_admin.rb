@@ -37,4 +37,52 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Website' do
+    list do
+      field :title
+      field :url
+      field :frequency
+      field :active
+    end
+    object_label_method do
+      :title
+    end
+  end
+
+  config.model 'User' do
+    configure :roles, :pg_string_array
+    list do
+      field :email
+      field :roles
+      field :last_sign_in_at
+      field :last_sign_in_ip
+    end
+    edit do
+      exclude_fields :id, :created_at, :updated_at
+      field :email
+      field :password
+      field :password_confirmation
+      field :roles
+      field :last_sign_in_at
+      field :last_sign_in_ip
+    end
+    object_label_method do
+      :email
+    end
+  end
+
+  config.model 'Notifier' do
+    list do
+      field :platform
+      field :website
+      field :active
+    end
+    edit do
+      field :platform
+      field :active
+      field :website
+      field :credentials
+    end
+  end
 end

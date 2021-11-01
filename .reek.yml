@@ -19,7 +19,8 @@ detectors:
     min_clump_size: 2
   DuplicateMethodCall:
     enabled: true
-    exclude: []
+    exclude:
+      - RailsAdminPgStringArray
     max_calls: 1
     allow_calls: []
   FeatureEnvy:
@@ -133,7 +134,7 @@ detectors:
   UtilityFunction:
     enabled: true
     exclude: []
-    public_methods_only: false
+    public_methods_only: true
 exclude_paths:
   - db/migrate
   - test

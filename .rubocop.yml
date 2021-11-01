@@ -42,6 +42,7 @@ Metrics/BlockLength:
   Exclude:
     - 'Guardfile'
     - 'app/admin/**/*'
+    - 'config/initializers/**/*'
   IgnoredMethods: [ 'describe', 'context' ]
 
 Naming/FileName:
