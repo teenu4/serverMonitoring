@@ -30,15 +30,7 @@ detectors:
     enabled: true
     exclude: []
   IrresponsibleModule:
-    enabled: true
-    exclude:
-      - ApplicationCable
-      - ApplicationHelper
-      - ApplicationJob
-      - ApplicationMailer
-      - ApplicationSystemTestCase
-      - ActiveSupport::TestCase
-      - ServerMonitoring::Application
+    enabled: false
   LongParameterList:
     enabled: true
     exclude: []
