@@ -1,5 +1,7 @@
 class Website < ApplicationRecord
-  validates :frequency, numericality: { greater_than: 0 }, if: :active
+  validates :schedule, presence: true, if: :active
 
   scope :active, -> { where(active: true) }
+
+  after_commit { ScheduleUpdater.call }
 end

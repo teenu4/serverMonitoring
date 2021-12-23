@@ -42,7 +42,7 @@ RailsAdmin.config do |config|
     list do
       field :title
       field :url
-      field :frequency
+      field :schedule
       field :active
     end
     object_label_method do

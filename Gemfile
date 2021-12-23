@@ -13,6 +13,11 @@ gem 'cancancan'
 # TODO: remove git details after stable rails release
 gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
 
+gem 'foreman'
+
+# service objects
+gem 'interactor'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -21,6 +26,10 @@ gem 'puma', '~> 5.0'
 
 # visit links
 gem 'rest-client'
+
+# background jobs
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails', '>= 0.3.4'

@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :website do
     title { 'MyString' }
     url { 'MyString' }
-    frequency { 1 }
+    schedule { 'MyString' }
     active { false }
   end
 end
