@@ -4,14 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.0.rc1'
+gem 'rails', '~> 7.0.0'
 
 # Roles managment
 gem 'cancancan'
 
 # Auth
 # TODO: remove git details after stable rails release
-gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
+gem 'devise'#, git: 'https://github.com/heartcombo/devise', branch: 'main'
 
 gem 'foreman'
 
@@ -27,9 +27,15 @@ gem 'puma', '~> 5.0'
 # visit links
 gem 'rest-client'
 
+# rails admin styles
+gem 'sassc-rails'
+
 # background jobs
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
+
+# assets fix
+gem 'sprockets-rails'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails', '>= 0.3.4'
@@ -50,7 +56,7 @@ gem 'redis', '~> 4.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Admin functionality
-gem 'rails_admin', '~> 2.0'
+gem 'rails_admin', '3.0.0.beta'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
