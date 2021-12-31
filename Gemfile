@@ -10,8 +10,7 @@ gem 'rails', '~> 7.0.0'
 gem 'cancancan'
 
 # Auth
-# TODO: remove git details after stable rails release
-gem 'devise'#, git: 'https://github.com/heartcombo/devise', branch: 'main'
+gem 'devise'
 
 gem 'foreman'
 

@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :website do
-    title { 'MyString' }
-    url { 'MyString' }
-    schedule { 'MyString' }
-    active { false }
+    title { 'Google' }
+    url { 'https://google.com' }
+    schedule { '* * * * *' }
+    active { true }
   end
 end

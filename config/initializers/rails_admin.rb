@@ -44,6 +44,7 @@ RailsAdmin.config do |config|
       field :url
       field :schedule
       field :active
+      field :last_visit
     end
     object_label_method do
       :title
@@ -77,12 +78,14 @@ RailsAdmin.config do |config|
       field :platform
       field :website
       field :active
+      field :min_interval
     end
     edit do
       field :platform
       field :active
       field :website
       field :credentials
+      field :min_interval
     end
   end
 end
